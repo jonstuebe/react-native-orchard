@@ -47,8 +47,11 @@ export const colors = {
   backgroundTertiary: colorByMode("#ffffff", "#2c2c2e"),
 
   textPrimary: colorByMode("#ffffff", "#000000"),
+  textPrimaryInverted: colorByMode("#000000", "#ffffff"),
   textSecondary: colorByMode("#f2f2f7", "#1c1c1e"),
+  textSecondaryInverted: colorByMode("#1c1c1e", "#f2f2f7"),
   textTertiary: colorByMode("#ffffff", "#2c2c2e"),
+  textTertiaryInverted: colorByMode("#2c2c2e", "#ffffff"),
 
   backgroundGroupedPrimary: colorByMode("#f2f2f7", "#000000"),
   backgroundGroupedSecondary: colorByMode("#ffffff", "#1c1c1e"),
