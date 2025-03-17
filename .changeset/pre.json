@@ -1,0 +1,8 @@
+{
+  "mode": "exit",
+  "tag": "next",
+  "initialVersions": {
+    "react-native-orchard": "0.1.0"
+  },
+  "changesets": []
+}
