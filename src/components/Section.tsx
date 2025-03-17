@@ -1,10 +1,10 @@
-import { Children, cloneElement, type ReactNode } from "react";
+import { Children, cloneElement, type JSX, type ReactNode } from "react";
 import { Text, type StyleProp, View, type ViewStyle } from "react-native";
 
-import { useTheme } from "../../hooks";
+import { useTheme } from "../hooks";
 
 export interface SectionProps {
-  children: ReactNode;
+  children: JSX.Element | JSX.Element[];
   style?: StyleProp<ViewStyle>;
 }
 

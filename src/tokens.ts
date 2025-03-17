@@ -92,7 +92,7 @@ export const typography = {
     letterSpacing: -0.4,
     lineHeight: 41,
     fontFamily,
-    fontWeight: "700",
+    fontWeight: "500",
   },
   title1Regular: {
     fontSize: 28,
@@ -106,7 +106,7 @@ export const typography = {
     letterSpacing: -0.4,
     lineHeight: 34,
     fontFamily,
-    fontWeight: "700",
+    fontWeight: "500",
   },
   title2Regular: {
     fontSize: 22,
@@ -120,7 +120,7 @@ export const typography = {
     letterSpacing: -0.4,
     lineHeight: 28,
     fontFamily,
-    fontWeight: "700",
+    fontWeight: "500",
   },
   title3Regular: {
     fontSize: 20,

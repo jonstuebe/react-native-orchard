@@ -1,12 +1,12 @@
 import { type ReactNode } from "react";
 import { View, type StyleProp, type ViewStyle } from "react-native";
 
-interface ContainerProps {
+export interface ListContainerProps {
   children: ReactNode;
   style?: StyleProp<ViewStyle>;
 }
 
-function Container({ children, style }: ContainerProps) {
+export function ListContainer({ children, style }: ListContainerProps) {
   return (
     <View
       style={[
@@ -21,7 +21,3 @@ function Container({ children, style }: ContainerProps) {
     </View>
   );
 }
-
-export const List = {
-  Container,
-};
