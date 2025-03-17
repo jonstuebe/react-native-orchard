@@ -1,0 +1,58 @@
+{
+  "name": "react-native-orchard",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./components/*": {
+      "import": "./dist/components/*.mjs",
+      "types": "./dist/components/*.d.ts"
+    },
+    "./hooks/*": {
+      "import": "./dist/hooks/*.mjs",
+      "types": "./dist/hooks/*.d.ts"
+    },
+    "./tokens": {
+      "import": "./dist/tokens.mjs",
+      "types": "./dist/tokens.d.ts"
+    },
+    "./theme": {
+      "import": "./dist/theme.mjs",
+      "types": "./dist/theme.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild"
+  },
+  "devDependencies": {
+    "@react-native-menu/menu": "^1.2.2",
+    "@react-navigation/native": "^7.0.14",
+    "@types/bun": "latest",
+    "@types/react": "^19.0.10",
+    "expo-haptics": "~14.0.1",
+    "expo-symbols": "~0.2.2",
+    "react-native": "0.76.7",
+    "react": "18.3.1",
+    "unbuild": "^3.5.0"
+  },
+  "peerDependencies": {
+    "@react-native-menu/menu": ">=1.2.0",
+    "@react-navigation/native": ">=7.0.0",
+    "react": ">=18.3.1",
+    "react-native": ">=0.76.0",
+    "typescript": "^5",
+    "expo-haptics": "^14",
+    "expo-symbols": ">=0.2.2"
+  },
+  "dependencies": {
+    "color": "^5.0.0"
+  }
+}
