@@ -1,0 +1,10 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit",
+    "source.removeUnusedImports": "explicit",
+    "source.sortImports": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "oxc.enable": true
+}

@@ -1,16 +1,13 @@
 import { SymbolView, type SymbolViewProps } from "expo-symbols";
-import { useTheme } from "../../hooks";
 import { useMemo } from "react";
+import { useTheme } from "../../hooks";
+import type { StringLiteralOrString } from "../../types";
 
 export interface RowAccessoryIconProps
   extends Omit<SymbolViewProps, "tintColor"> {
-  color?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "quaternary"
-    | "blue"
-    | (string & {});
+  color?: StringLiteralOrString<
+    "primary" | "secondary" | "tertiary" | "quaternary" | "blue"
+  >;
 }
 
 export function RowAccessoryIcon({
@@ -38,7 +35,7 @@ export function RowAccessoryIcon({
       default:
         return color;
     }
-  }, [color]);
+  }, [colors, color]);
 
   return (
     <SymbolView

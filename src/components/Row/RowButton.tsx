@@ -20,14 +20,14 @@ export function RowButton({
           backgroundColor: colors.fillTertiary,
         },
 
-        typeof style === "function" ? style(state) : style,
+        "function" === typeof style ? style(state) : style,
       ]}
       textStyle={(state) => [
         {
           fontWeight: "500",
           fontSize: typography.subheadlineRegular.fontSize,
         },
-        typeof textStyle === "function" ? textStyle(state) : textStyle,
+        "function" === typeof textStyle ? textStyle(state) : textStyle,
       ]}
       {...props}
     >

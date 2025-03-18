@@ -1,6 +1,6 @@
 import { colors } from "./tokens";
 
-type FontStyle = {
+interface FontStyle {
   fontFamily: string;
   fontWeight:
     | "normal"
@@ -14,9 +14,9 @@ type FontStyle = {
     | "700"
     | "800"
     | "900";
-};
+}
 
-type Theme = {
+interface Theme {
   dark: boolean;
   colors: {
     primary: string;
@@ -32,7 +32,7 @@ type Theme = {
     bold: FontStyle;
     heavy: FontStyle;
   };
-};
+}
 const fonts: {
   regular: FontStyle;
   medium: FontStyle;

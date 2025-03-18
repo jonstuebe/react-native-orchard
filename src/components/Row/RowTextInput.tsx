@@ -1,7 +1,8 @@
-import { type TextInputProps, TextInput, View } from "react-native";
+import { TextInput, type TextInputProps, View } from "react-native";
 
 import { useTheme } from "../../hooks";
 import { PressableOpacity } from "../PressableOpacity";
+
 import { RowAccessoryIcon } from "./RowAccessoryIcon";
 
 export interface RowTextInputProps extends TextInputProps {
@@ -9,7 +10,6 @@ export interface RowTextInputProps extends TextInputProps {
 }
 
 export function RowTextInput({
-  children,
   value,
   onReset,
   style,

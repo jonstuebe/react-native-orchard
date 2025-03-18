@@ -1,4 +1,4 @@
-import { MenuView, type MenuComponentProps } from "@react-native-menu/menu";
+import { type MenuComponentProps, MenuView } from "@react-native-menu/menu";
 import type { ReactNode } from "react";
 
 import { PressableOpacity } from "../PressableOpacity";

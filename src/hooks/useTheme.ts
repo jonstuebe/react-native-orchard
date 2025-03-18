@@ -7,8 +7,8 @@ export function useTheme() {
   return {
     ...tokens,
     mode,
-    isLightMode: mode === "light",
-    isDarkMode: mode === "dark",
+    isLightMode: "light" === mode ,
+    isDarkMode: "dark" === mode ,
     colors: Object.fromEntries(
       Object.entries(tokens.colors).map(([key, value]) => {
         return [key, value[mode]];

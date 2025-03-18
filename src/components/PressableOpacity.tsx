@@ -1,8 +1,8 @@
-import { Pressable, View } from "react-native";
-import { forwardRef } from "react";
 import * as Haptics from "expo-haptics";
+import { forwardRef } from "react";
+import { Pressable } from "react-native";
 
-import type { PressableProps } from "react-native";
+import type { PressableProps, View } from "react-native";
 
 export interface PressableOpacityProps
   extends Omit<PressableProps, "onPressIn"> {
@@ -25,7 +25,7 @@ export const PressableOpacity = forwardRef<View, PressableOpacityProps>(
           {
             opacity: state.pressed || disabled ? activeOpacity : undefined,
           },
-          typeof style === "function" ? style(state) : style,
+          "function" === typeof style ? style(state) : style,
         ]}
         {...props}
       >

@@ -1,0 +1,57 @@
+{
+  "plugins": ["import", "react", "unicorn", "typescript", "oxc"],
+  "rules": {
+    // general
+    "no-ternary": "off",
+    "max-lines-per-function": "off",
+    "max-lines": "off",
+    "filename-case": "off",
+    "sort-keys": "off",
+    "no-magic-numbers": "off",
+    "max-dependencies": "off",
+    "sort-imports": "off",
+    "no-duplicate-imports": "off",
+    "max-nested-callbacks": "off",
+    "max-depth": ["warn", 1],
+    "func-style": "off",
+    "no-namespace": "off",
+    "no-empty-interface": "off",
+    "no-anonymous-default-export": "off",
+
+    // import
+    "import/no-duplicates": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "type"],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc" },
+        "sortTypesGroup": true
+      }
+    ],
+    "import/exports-last": "off",
+
+    // typescript
+    "typescript/consistent-type-imports": [
+      "error",
+      {
+        "fixStyle": "separate-type-imports",
+        "prefer": "type-imports"
+      }
+    ],
+
+    // react
+    "react/react-in-jsx-scope": "off",
+
+    // unicorn
+    "unicorn/no-null": "off"
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "pedantic": "warn",
+    "perf": "warn",
+    "style": "warn",
+    "nursery": "error"
+  }
+}

@@ -1,4 +1,4 @@
-import { type TextProps, Text } from "react-native";
+import { Text, type TextProps } from "react-native";
 
 import { useTheme } from "../../hooks";
 

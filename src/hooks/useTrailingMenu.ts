@@ -2,7 +2,7 @@ import {
   type MenuAction,
   type NativeActionEvent,
 } from "@react-native-menu/menu";
-import { useState, useCallback, useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 type OnPressAction = (event: NativeActionEvent) => void;
 

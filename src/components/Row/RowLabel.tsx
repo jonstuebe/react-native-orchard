@@ -1,4 +1,4 @@
-import { useMemo, type ReactNode } from "react";
+import { type ReactNode, useMemo } from "react";
 import { Text, type TextProps } from "react-native";
 import { useTheme } from "../../hooks";
 
@@ -47,12 +47,18 @@ export function RowLabel({
       default:
         break;
     }
-  }, []);
+  }, [
+    colors.labelPrimary,
+    colors.labelSecondary,
+    colors.labelTertiary,
+    colors.labelQuaternary,
+    color,
+  ]);
 
   return (
     <Text
       style={[
-        variant === "title"
+        "title" === variant
           ? typography.rowLabelTitle
           : typography.rowLabelSubtitle,
         colorStyle,

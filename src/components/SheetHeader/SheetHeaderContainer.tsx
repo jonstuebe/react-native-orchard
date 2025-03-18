@@ -14,7 +14,7 @@ export function SheetHeaderContainer({ children }: { children: ReactNode }) {
         paddingHorizontal: 16,
         flexDirection: "row",
         justifyContent:
-          Children.count(children) === 1 ? "flex-end" : "space-between",
+          1 === Children.count(children) ? "flex-end" : "space-between",
         alignItems: "center",
         backgroundColor: colors.backgroundPrimary,
       }}

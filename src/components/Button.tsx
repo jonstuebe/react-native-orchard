@@ -1,20 +1,19 @@
 import { SymbolView, type SymbolViewProps } from "expo-symbols";
 import { forwardRef, useMemo } from "react";
-import {
-  type PressableStateCallbackType,
-  type StyleProp,
-  Text,
-  type TextStyle,
-  View,
-  type ViewStyle,
+import type {
+  PressableStateCallbackType,
+  StyleProp,
+  TextStyle,
+  ViewStyle,
 } from "react-native";
+import { Text, type View } from "react-native";
 
+import Color from "color";
+import { useTheme } from "../hooks";
 import {
   PressableOpacity,
   type PressableOpacityProps,
 } from "./PressableOpacity";
-import { useTheme } from "../hooks";
-import Color from "color";
 
 export interface ButtonProps extends PressableOpacityProps {
   variant?: "default" | "plain" | "gray" | "tinted" | "filled";
@@ -96,8 +95,6 @@ export const Button = forwardRef<View, ButtonProps>(function Button(
             color: destructive ? colors.red : colors.blue,
           },
         };
-      case "filled":
-      case "default":
       default:
         return {
           container: {
@@ -109,7 +106,17 @@ export const Button = forwardRef<View, ButtonProps>(function Button(
           },
         };
     }
-  }, [variant, padding, fontWeight, destructive, rounded]);
+  }, [
+    variant,
+    padding,
+    fontWeight,
+    destructive,
+    rounded,
+    colors,
+    radius,
+    spacing,
+    typography,
+  ]);
 
   return (
     <PressableOpacity
@@ -123,7 +130,7 @@ export const Button = forwardRef<View, ButtonProps>(function Button(
           gap: 8,
         },
         styles.container,
-        typeof style === "function" ? style(state) : style,
+        "function" === typeof style ? style(state) : style,
       ]}
     >
       {(state) => (
@@ -142,10 +149,10 @@ export const Button = forwardRef<View, ButtonProps>(function Button(
           <Text
             style={[
               styles.text,
-              typeof textStyle === "function" ? textStyle(state) : textStyle,
+              "function" === typeof textStyle ? textStyle(state) : textStyle,
             ]}
           >
-            {typeof children === "function" ? children(state) : children}
+            {"function" === typeof children ? children(state) : children}
           </Text>
           {rightSymbol ? (
             <SymbolView

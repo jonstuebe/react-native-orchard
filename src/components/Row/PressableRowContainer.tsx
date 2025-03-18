@@ -25,7 +25,7 @@ export function PressableRowContainer({
           backgroundColor: colors.rowContainer,
           borderRadius: rounded ? radius.rowContainer : undefined,
         },
-        typeof style === "function" ? style(state) : style,
+        "function" === typeof style ? style(state) : style,
       ]}
       {...props}
     >

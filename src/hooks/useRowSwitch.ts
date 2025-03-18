@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 
 export function useRowSwitch(
-  initialValue: boolean = false,
+  initialValue = false,
   onChangeValue?: (value: boolean) => void
 ) {
   const [value, setValue] = useState(initialValue);
