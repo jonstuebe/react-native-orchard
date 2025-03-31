@@ -57,7 +57,7 @@ export const Button = forwardRef<View, ButtonProps>(function Button(
     };
     let sharedTextStyle: TextStyle = {
       color: colors.white,
-      fontSize: typography.subheadlineRegular.fontSize,
+      fontSize: typography.calloutRegular.fontSize,
       fontWeight,
       textAlign: "center",
     };

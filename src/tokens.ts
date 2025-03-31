@@ -66,7 +66,7 @@ export const colors = {
   fillVibrantTertiary: colorByMode("#7f7f7f99", "#7f7f7f99"),
 
   separatorOpaque: colorByMode("#c6c6c8", "#38383a"),
-  separatorNonOpaque: colorByMode("#3c3c435c", "#545458a6"),
+  separatorNonOpaque: colorByMode("#54545820", "#545458a6"),
 
   materialThick: colorByMode("#EAEAEA", "#2D2D2D"),
   materialRegular: colorByMode("#C6C6C6", "#3A3A3A"),
